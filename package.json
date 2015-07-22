@@ -1,0 +1,35 @@
+{
+  "name": "dominance-frontier",
+  "version": "0.0.0",
+  "description": "Compute dominator tree and dominance frontier",
+  "main": "lib/frontier.js",
+  "scripts": {
+    "test": "jscs lib/*.js test/*.js && jshint lib/*.js && mocha --reporter spec test/*-test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/js-js/dominance-frontier.git"
+  },
+  "keywords": [
+    "SSA",
+    "CFG",
+    "Pipeline",
+    "JIT",
+    "Control",
+    "Dependence",
+    "Dominator",
+    "Frontier"
+  ],
+  "author": "Fedor Indutny <fedor@indutny.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/js-js/dominance-frontier/issues"
+  },
+  "homepage": "https://github.com/js-js/dominance-frontier#readme",
+  "devDependencies": {
+    "jscs": "^1.13.1",
+    "jshint": "^2.8.0",
+    "json-pipeline": "^1.2.0",
+    "mocha": "^2.2.5"
+  }
+}
