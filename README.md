@@ -5,14 +5,14 @@
 ## API
 
 ```javascript
-var pipeline = require('dominance-frontier').create('dominance');
+var pipeline = require('json-pipeline').create('dominance');
 
 // Initialize pipeline
 // ...
 // ...
 
-var dominance-frontier = require('dominance-frontier').create(pipeline);
-dominance-frontier.compute();
+var frontier = require('dominance-frontier').create(pipeline);
+frontier.compute();
 
 // Use `.parent`/`.children` in pipeline's blocks
 ```
