@@ -1,6 +1,9 @@
 var assert = require('assert');
+var assertText = require('assert-text');
 var tarjan = require('../../');
 var pipeline = require('json-pipeline');
+
+assertText.options.trim = true;
 
 function parse(root, src) {
   var p = pipeline.create('dominance');
@@ -74,13 +77,5 @@ exports.test = function test(root, input, expected) {
   var exp = expected.toString()
                     .replace(/^function.*{\/\*|\*\/}$/g, '');
 
-  function strip(val) {
-    return val.split(/\r\n|\r|\n/g).map(function(line) {
-      return line.replace(/^\s*/, '');
-    }).filter(function(line) {
-      return line;
-    }).join('\n');
-  }
-
-  assert.equal(strip(out), strip(exp));
+  assertText.equal(out, exp);
 }
