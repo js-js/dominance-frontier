@@ -32,5 +32,8 @@
     "jshint": "^2.8.0",
     "json-pipeline": "^1.2.0",
     "mocha": "^2.2.5"
+  },
+  "dependencies": {
+    "bitfield.js": "^1.0.0"
   }
 }
