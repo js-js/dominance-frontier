@@ -57,6 +57,7 @@ describe('Dominance Frontier', function() {
       8 -> 9
       9 -> 10
       9 -> 11
+      10 -> 11
       11 -> 9, 12
       12 -> 2, Exit
     */}, function() {/*
@@ -70,6 +71,7 @@ describe('Dominance Frontier', function() {
         Entry -> 1, Exit
       DF:
         1 -> Exit
+        10 -> 11
         11 -> 2, 9, Exit
         12 -> 2, Exit
         2 -> 2, Exit
@@ -80,6 +82,21 @@ describe('Dominance Frontier', function() {
         7 -> 8
         8 -> 2, Exit
         9 -> 2, 9, Exit
+      DEPTH:
+        1 : 0
+        10 : 2
+        11 : 2
+        12 : 1
+        2 : 1
+        3 : 1
+        4 : 1
+        5 : 1
+        6 : 1
+        7 : 1
+        8 : 1
+        9 : 2
+        Entry : 0
+        Exit : 0
     */});
   });
 

@@ -64,7 +64,17 @@ function stringify(p) {
     }).sort().join(', ');
   }).join('\n');
 
-  return 'IDOM:\n' + idom + '\nDF:\n' + df;
+  var hasLoops = false;
+  var depth = list.map(function(item) {
+    if (item.loopDepth)
+      hasLoops = true;
+    return '  ' + item.label + ' : ' + item.loopDepth;
+  }).join('\n');
+
+  var out = 'IDOM:\n' + idom + '\nDF:\n' + df;
+  if (hasLoops)
+    out += '\nDEPTH:\n' + depth;
+  return out;
 }
 
 exports.test = function test(root, input, expected) {
