@@ -131,4 +131,15 @@ describe('Dominance Frontier', function() {
         5 -> 1
     */});
   });
+
+  it('should not fail on disconnected blocks', function() {
+    common.test('1', function() {/*
+      1 -> 2
+      3
+    */}, function() {/*
+      IDOM:
+        1 -> 2
+      DF:
+    */});
+  });
 });
