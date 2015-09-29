@@ -1,6 +1,6 @@
 {
   "name": "dominance-frontier",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Compute dominator tree and dominance frontier",
   "main": "lib/frontier.js",
   "scripts": {
