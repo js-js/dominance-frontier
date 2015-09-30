@@ -142,4 +142,23 @@ describe('Dominance Frontier', function() {
       DF:
     */});
   });
+
+  it('should not fail on regression loop', function() {
+    common.test('0', function() {/*
+      1 -> 2
+      2 -> 1
+      0 -> 1
+    */}, function() {/*
+      IDOM:
+        0 -> 1
+        1 -> 2
+      DF:
+        1 -> 1
+        2 -> 1
+      DEPTH:
+        0 : 0
+        1 : 1
+        2 : 1
+    */});
+  });
 });
