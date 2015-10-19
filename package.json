@@ -34,6 +34,6 @@
     "mocha": "^2.2.5"
   },
   "dependencies": {
-    "bitfield.js": "^1.2.0"
+    "hierarchical-bitfield.js": "^1.0.0"
   }
 }
